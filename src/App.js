@@ -4,10 +4,14 @@ import Search from './components/Search';
 
 export default () => {
   return (
-    <div className="app">
+    <div className="container">
       <Navbar />
-      <Col />
-      <Search />
+      <div class="row">
+        <div class="col">
+          <Col />
+          <Search />
+        </div>
+      </div>
     </div>
   );
 }

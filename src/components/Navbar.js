@@ -2,7 +2,11 @@ import React from 'react';
 
 const Navbar = () => {
   return(
-    <div>NAVBAR</div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="/" class="navbar-brand" >Ucook app</a>
+      </div>
+    </nav>
   )
 }
 
