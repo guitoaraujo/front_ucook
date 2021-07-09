@@ -1,11 +1,15 @@
 import React from 'react';
 import Recipe from './Recipe';
 
-const RecipesList = ({results}) => {
+const RecipesList = ({recipesList}) => {
+  const recipesListItens = recipesList.map((recipe, index)=>{
+    return(
+      <Recipe key={index} recipeIten={recipe} />
+    )
+  })
   return(
     <div>
-      {results}
-      <Recipe />
+      {recipesListItens}
     </div>
   )
 }

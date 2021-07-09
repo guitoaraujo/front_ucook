@@ -1,8 +1,8 @@
 import React from 'react';
 import Tag from './Tag';
 
-const TagsList = ({tags}) => {
-  const tagsListItens = tags.map((tag, index)=>{
+const TagsList = ({tagsItens}) => {
+  const tagsListItens = tagsItens.map((tag, index)=>{
     return(
       <Tag key={index} tagIten={tag} />
     )

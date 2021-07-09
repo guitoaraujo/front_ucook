@@ -9,7 +9,7 @@ const App = () => {
   const filterList = ['Ingredients', 'Tags', 'Name']
   const [filter, setFilter] = useState('')
   const [terms, setTerms] = useState('')
-  const [results, setResults] = useState([])
+  const [recipes, setRecipes] = useState([])
   const [tags, setTags] = useState([])
 
   useEffect(()=> {
@@ -22,7 +22,8 @@ const App = () => {
         }
       })
 
-      setResults()
+      setRecipes([])
+      setTags([])
     }
 
     search()
@@ -46,10 +47,10 @@ const App = () => {
           <div className="row">
             <div className="col-4 mt-5"> 
               <Search handleChange={e => setFilter(e.target.value)} handleSubmit={target => handleSubmit(target)} options={optionsForFilterList}/>
-              <TagsList tags={tags}/>
+              <TagsList tagsItens={tags}/>
             </div>
             <div className="col-8 mt-5"> 
-              <RecipeList results={results} />
+              <RecipeList recipesList={recipes} />
             </div>   
           </div>
         </div>
