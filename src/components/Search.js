@@ -11,7 +11,7 @@ const Search = ({options, handleChange, handleSubmit}) => {
       <div className="col">
         <div className="mb-3">
           <form onSubmit={e => handleClick(e)}>
-            <label htmlFor="filter" className="form-label">Search Field</label>
+            <label htmlFor="filter" className="form-label">Filter Field</label>
             <select onChange={handleChange} className="form-select mb-3" id="filter" autoFocus>
               {options}
             </select>

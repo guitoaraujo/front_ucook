@@ -13,17 +13,20 @@ const App = () => {
   const [tags, setTags] = useState([])
 
   useEffect(()=> {
-    const URL = ''
+    const DEV_URL = 'http://localhost:3000/api/v1/recipes'
+    const PRO_URL = 'https://ucookapp.herokuapp.com/api/v1/recipes'
+
     const search = async () => {
-      const { data } = await axios.get(URL, {
+      const { data } = await axios.get(PRO_URL, {
         params: {
           filter: filter,
           terms: terms
         }
       })
 
-      setRecipes([])
-      setTags([])
+      setRecipes(data.recipes)
+      setTags(data.most_common_tags)
+      setFilter(data.filter)
     }
 
     search()
@@ -50,7 +53,7 @@ const App = () => {
               <TagsList tagsItens={tags}/>
             </div>
             <div className="col-8 mt-5"> 
-              <RecipeList recipesList={recipes} />
+              <RecipeList recipesItens={recipes} />
             </div>   
           </div>
         </div>

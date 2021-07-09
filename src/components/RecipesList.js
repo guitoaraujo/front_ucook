@@ -1,8 +1,9 @@
 import React from 'react';
 import Recipe from './Recipe';
 
-const RecipesList = ({recipesList}) => {
-  const recipesListItens = recipesList.map((recipe, index)=>{
+const RecipesList = ({recipesItens}) => {
+  
+  const recipesListItens = recipesItens.map((recipe, index)=>{
     return(
       <Recipe key={index} recipeIten={recipe} />
     )
