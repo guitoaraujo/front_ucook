@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Recipe = ({recipeIten}) => {
   return(
@@ -12,7 +13,7 @@ const Recipe = ({recipeIten}) => {
             <div className="col-8">
               <div className="card-body">
                 <h5 className="card-title">
-                  <a href='' >{ recipeIten.name }</a>
+                  <Link to={`/recipe/${recipeIten.id}`} >{ recipeIten.name }</Link>
                   <span className="badge bg-warning text-dark">{ recipeIten.rate }</span>
                 </h5>
                 <p className="card-text">{ recipeIten.tags.join(' ') }</p>
